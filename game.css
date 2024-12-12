@@ -7,6 +7,7 @@
 
 body {
     background-image: url(img/fondo.png);
+    background-size: 80px;
     color: white;
     font-family: Arial, sans-serif;
     cursor: url(img/aim.png) 16 16 , auto;
@@ -125,7 +126,13 @@ body {
     transform: translateX(-50%); /* Centramos horizontalmente */
     z-index: 100;
 }
-
+#score{
+    position: fixed;
+    top: 20px; /* Altura desde el borde inferior */
+    left: 50%;
+    transform: translateX(-50%); /* Centramos horizontalmente */
+    z-index: 100;
+}
 .lives-container img {
     width: 150px; 
     height: auto;
@@ -136,4 +143,69 @@ body {
 .lives-container img.lost-life {
     transform: scale(1.2); /* Aumenta de tamaño */
     opacity: 0.7; /* Efecto de parpadeo */
+}
+#game-over{
+    display: none;
+    background-color: rgb(70, 70, 70);
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#game-over > div img{
+    height: 100px;
+    width: 100px;
+    margin: 40px;
+    cursor: pointer;
+
+}
+/* Puntos Animados */
+.points-display {
+    position: absolute;
+    top: -20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(255, 0, 221);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    -webkit-text-stroke:2px white; /* Borde del texto */
+    text-stroke: 2px white; /* Compatibilidad con navegadores */
+    animation: pointsMoveUp 1s ease-out forwards;
+    text-align: center;
+    opacity: 0.9;
+}
+.mult-display {
+    position: absolute;
+    top: -20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(195, 255, 0);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    -webkit-text-stroke:2px white; /* Borde del texto */
+    text-stroke: 2px white; /* Compatibilidad con navegadores */
+    animation: pointsMoveUp 1s ease-out forwards;
+    text-align: center;
+    opacity: 0.9;
+}
+
+/* Animación de Movimiento hacia Arriba */
+@keyframes pointsMoveUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+h2{
+    color: red;
+    font-size: 30px;
+}
+#restart img{
+    transition: all 1s ease;
+}
+#restart img:hover{
+    transform: rotate(360deg);
 }
