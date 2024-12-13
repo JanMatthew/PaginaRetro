@@ -20,10 +20,10 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 75px;
-    top: 0; /* La parte superior de la barra lateral se alinea con la parte superior de la ventana */
-    left: 0; /* La barra lateral se posiciona a la izquierda de la ventana */
-    height: 100vh; /* La altura será del 100% del viewport para ocupar toda la pantalla */
-    width: 350px; /* Ajusta el ancho según tus necesidades */
+    top: 0; 
+    left: 0; 
+    height: 100vh;
+    width: 350px; 
     z-index: 1000;
 }
 .container{
@@ -42,8 +42,8 @@ body{
 }
 
 .logo_container:hover {
-    animation: bounce 0.6s ease-in-out infinite; /* Efecto de rebote */
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 255, 255, 0.5); /* Sombra dinámica */
+    animation: bounce 0.6s ease-in-out infinite;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 .logo {
@@ -52,16 +52,16 @@ body{
 }
 
 .logo:hover {
-    filter: hue-rotate(90deg); /* Cambia el tono de los colores */
+    filter: hue-rotate(90deg);
 }
 
 /* Animación de rebote */
 @keyframes bounce {
     0%, 100% {
-        transform: translateY(0); /* Posición inicial */
+        transform: translateY(0); 
     }
     50% {
-        transform: translateY(-10px); /* Rebote hacia arriba */
+        transform: translateY(-10px); 
     }
 }
 ul{
@@ -70,44 +70,43 @@ ul{
 }
 li {
     position: relative;
-    background: linear-gradient(135deg, #4579f3, #245be7); /* Degradado para un efecto tridimensional */
+    background: linear-gradient(135deg, #4579f3, #245be7); 
     height: 50px;
     width: 60px;
     margin: 10px;
-    border-right: 6px solid #2376d4;  /* Borde derecho más oscuro para la sombra */
-    border-bottom: 6px solid #2376d4; /* Borde inferior para la sombra */
-    border-left: 6px solid #63e0ff;   /* Borde izquierdo más claro para el brillo */
-    border-top: 6px solid #63e0ff;    /* Borde superior para el brillo */
-    box-shadow: inset -3px -3px 10px rgba(255, 255, 255, 0.4); /* Sombra interna para simular el relieve */
+    border-right: 6px solid #2376d4;  
+    border-bottom: 6px solid #2376d4; 
+    border-left: 6px solid #63e0ff; 
+    border-top: 6px solid #63e0ff;  
+    box-shadow: inset -3px -3px 10px rgba(255, 255, 255, 0.4); 
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-weight: bold;
-    text-shadow: 1px 1px 2px #000; /* Sombra al texto para mejorar la visibilidad */
-    transition: all 0.3s ease; /* Transición general */
-
+    text-shadow: 1px 1px 2px #000; 
+    transition: all 0.3s ease; 
 }
 .buttons li:hover {
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
-    background: linear-gradient(135deg, #63e0ff, #2376d4); /* Cambia el degradado */
-    box-shadow: 0 0 15px rgba(99, 224, 255, 0.8); /* Agrega un brillo */
-    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8); /* Realza el texto */
-}
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #63e0ff, #2376d4); 
+    box-shadow: 0 0 15px rgba(99, 224, 255, 0.8); 
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
+} 
 .marine{
     width: 150px;
 }
 .flecha{
-    display: none; /* Mostrar la flecha */
+    display: none; 
     position: absolute;
     top: 0;
     right: 50px;
     height: 50px;
     width: 50px;
-    background: linear-gradient(135deg, #ff0000, #ff6363); /* Degradado de rojo */
-    clip-path: polygon(0 0, 0 100%, 100% 50%); /* Forma triangular de la flecha */
-    box-shadow: 0px 0px 10px 5px rgba(255, 0, 0, 0.6); /* Sombra para dar un efecto de brillo */
+    background: linear-gradient(135deg, #ff0000, #ff6363); 
+    clip-path: polygon(0 0, 0 100%, 100% 50%); 
+    box-shadow: 0px 0px 10px 5px rgba(255, 0, 0, 0.6); 
     animation: mover 0.6s infinite linear alternate;
 }
 @keyframes mover {
@@ -204,12 +203,11 @@ li:hover .flecha{
     color: #000;
     background-color: transparent;
     padding: 20px;
-    border-radius: 10px; /* Borde redondeado */
+    border-radius: 10px;
     position: relative;
     border-width: 4px;
     border-style: solid;
-    border-image: linear-gradient(to right, #80b3ff, #ffcc00, #ff5733) 1; /* Degradado en el borde */
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.6); /* Sombra */
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.6); 
     animation: gradientRotation 5s linear infinite;
 }
 @keyframes gradientRotation {
@@ -239,7 +237,7 @@ li:hover .flecha{
     background-color: #ffffff;
     padding: 0 10px;
     font-weight: bold;
-    color: #003399; /* Color azul similar al de la imagen */
+    color: #003399; 
     font-size: 1.1em;
     text-shadow: 4px 4px 6px black;
 }
@@ -270,9 +268,9 @@ li:hover .flecha{
 }
 
 .main-image img:hover {
-    transform: scale(0.9) rotate(5deg); /* Aumenta el tamaño y rota ligeramente */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Incrementa la sombra */
-    filter: brightness(1.8); /* Hace la imagen más brillante */
+    transform: scale(0.9) rotate(5deg); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    filter: brightness(1.8);
 }
 .image-gallery-title {
     text-align: center;
@@ -318,7 +316,7 @@ li:hover .flecha{
     animation: combinedAnimation 2s steps(1) infinite;
 }
 @keyframes combinedAnimation {
-    /* Animación de shooting: 4 ciclos rápidos de aim y shoot */
+
     0%, 5% {
         background-image: url(img/soldier/soldierAim.png);
     }
@@ -343,8 +341,6 @@ li:hover .flecha{
     36%, 40% {
         background-image: url(img/soldier/soldierShoot.png);
     }
-
-    /* Animación de die con nuevos frames */
     41%, 50% {
         background-image: url(img/soldier/soldierDeath1.png);
     }
@@ -387,7 +383,7 @@ li:hover .flecha{
 
 .mute-button {
     padding: 10px;
-    font-size: 0; /* Oculta texto, si hay, para que solo se muestre la imagen */
+    font-size: 0; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -420,12 +416,12 @@ li:hover .flecha{
     }
 }
 .gallery-item img {
-    filter: grayscale(100%); /* Convierte la imagen en blanco y negro */
+    filter: grayscale(100%);
     transition: filter 0.3s ease;
 }
 
 .gallery-item img:hover {
-    filter: grayscale(0%); /* Devuelve los colores al pasar el cursor */
+    filter: grayscale(0%); 
 }
 
 .play-now {

@@ -1,4 +1,3 @@
-/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +12,6 @@ body {
     cursor: url(img/cursors/aim.png) 16 16 , auto;
 }
 
-/* Game Container */
 .game-container {
     position: relative;
     width: 100%;
@@ -38,8 +36,6 @@ body {
     transition: all 0.3s ease;
 }
 
-
-/* Game Overlay */
 .game-overlay {
     display: none;
     position: absolute;
@@ -55,7 +51,6 @@ body {
     z-index: 1000;
 }
 
-/* Game Section */
 .game {
     position: relative;
     width: 100%;
@@ -72,15 +67,13 @@ body {
     align-items: center;
 }
 
-/* Barra de vida */
 .lifebar {
     width: 80%;
     height: 20px;
     margin-bottom: 5px;
 }
 
-/* Estilo del enemigo */
-.enemy {
+.bicho {
     width: 100px;
     height: 100px;
     background-size: cover;
@@ -222,16 +215,16 @@ body {
 
 .lives-container {
     position: fixed;
-    bottom: 20px; /* Altura desde el borde inferior */
+    bottom: 20px;
     left: 50%;
-    transform: translateX(-50%); /* Centramos horizontalmente */
+    transform: translateX(-50%); 
     z-index: 100;
 }
 #score{
     position: fixed;
-    top: 20px; /* Altura desde el borde inferior */
+    top: 20px; 
     left: 50%;
-    transform: translateX(-50%); /* Centramos horizontalmente */
+    transform: translateX(-50%); 
     z-index: 100;
 }
 .lives-container img {
@@ -240,11 +233,7 @@ body {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Efecto Visual de Pérdida de Vida */
-.lives-container img.lost-life {
-    transform: scale(1.2); /* Aumenta de tamaño */
-    opacity: 0.7; /* Efecto de parpadeo */
-}
+
 #game-over{
     display: none;
     background-color: rgb(70, 70, 70);
@@ -261,6 +250,7 @@ body {
     cursor: pointer;
 
 }
+
 /* Puntos Animados */
 .points-display {
     position: absolute;
@@ -269,12 +259,13 @@ body {
     font-weight: bold;
     color: rgb(255, 0, 221);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-    -webkit-text-stroke:2px white; /* Borde del texto */
-    text-stroke: 2px white; /* Compatibilidad con navegadores */
+    -webkit-text-stroke:2px white;
+    text-stroke: 2px white;
     animation: pointsMoveUp 1s ease-out forwards;
     text-align: center;
     opacity: 0.9;
 }
+
 .mult-display {
     position: absolute;
     top: -20px;
@@ -282,14 +273,14 @@ body {
     font-weight: bold;
     color: rgb(195, 255, 0);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-    -webkit-text-stroke:2px white; /* Borde del texto */
-    text-stroke: 2px white; /* Compatibilidad con navegadores */
+    -webkit-text-stroke:2px white; 
+    text-stroke: 2px white; 
     animation: pointsMoveUp 1s ease-out forwards;
     text-align: center;
     opacity: 0.9;
 }
 
-/* Animación de Movimiento hacia Arriba */
+/* Animación de Movimiento hacia Arriba de los Puntos */
 @keyframes pointsMoveUp {
     0% {
         opacity: 1;
