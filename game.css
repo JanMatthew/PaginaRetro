@@ -118,6 +118,107 @@ body {
         background-image: url(img/soldier/soldierDeath7.png);
     }
 }
+.fly {
+    width: 60px;
+    height: 50px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: flyFly 0.3s steps(1) infinite alternate;
+    cursor: url(img/shoot.png) 16 16, auto;
+}
+@keyframes flyFly {
+    0%, 33% {
+        background-image: url(img/fly/fly1.png);
+    }
+    34%, 66% {
+        background-image: url(img/fly/fly2.png);
+    }
+    67%, 100% {
+        background-image: url(img/fly/fly3.png);
+    }
+}
+@keyframes flyDeath {
+    0%, 12% {
+        background-image: url(img/fly/death1.png);
+    }
+    13%, 24% {
+        background-image: url(img/fly/death2.png);
+    }
+    25%, 36% {
+        background-image: url(img/fly/death3.png);
+    }
+    37%, 48% {
+        background-image: url(img/fly/death4.png);
+    }
+    49%, 60% {
+        background-image: url(img/fly/death5.png);
+    }
+    61%, 72% {
+        background-image: url(img/fly/death6.png);
+    }
+    73%, 84% {
+        background-image: url(img/fly/death7.png);
+    }
+    85%, 92% {
+        background-image: url(img/fly/death8.png);
+    }
+    93%, 100% {
+        background-image: url(img/fly/death9.png);
+    }
+}
+.tank{
+    width: 120px;
+    height: 120px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: tankMove 0.3s steps(1) infinite alternate;
+    cursor: url(img/shoot.png) 16 16, auto;
+}
+@keyframes tankMove {
+    0%, 33% {
+        background-image: url(img/tank/tank2.png);
+    }
+    34%, 66% {
+        background-image: url(img/tank/tank1.png);
+    }
+    67%, 100% {
+        background-image: url(img/tank/tank3.png);
+    }
+}
+@keyframes tankDeath {
+    0%, 10% {
+        background-image: url(img/tank/death1.png);
+    }
+    11%, 20% {
+        background-image: url(img/tank/death2.png);
+    }
+    21%, 30% {
+        background-image: url(img/tank/death3.png);
+    }
+    31%, 40% {
+        background-image: url(img/tank/death4.png);
+    }
+    41%, 50% {
+        background-image: url(img/tank/death5.png);
+    }
+    51%, 60% {
+        background-image: url(img/tank/death6.png);
+    }
+    61%, 70% {
+        background-image: url(img/tank/death7.png);
+    }
+    71%, 80% {
+        background-image: url(img/tank/death8.png);
+    }
+    81%, 90% {
+        background-image: url(img/tank/death9.png);
+    }
+    91%, 100% {
+        background-image: url(img/tank/death10.png);
+    }
+}
 
 .lives-container {
     position: fixed;

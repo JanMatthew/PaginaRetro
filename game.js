@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         lives = 3;
         livesImg.src = `img/life/lifebar${lives}.png`;
 
-        gameInterval = setInterval(spawnEnemy, 1000); // Spawn enemies every second
+        gameInterval = setInterval(spawnEnemy, 1500); // Spawn enemies every second
     }
 
     // Spawn enemies
@@ -60,13 +60,34 @@ document.addEventListener("DOMContentLoaded", () => {
         const enemyContainer = document.createElement("div");
         enemyContainer.classList.add("enemy-container");
 
-        const lifebar = document.createElement("img");
-        lifebar.src = "img/life/lifebar3.png";
-        lifebar.classList.add("lifebar");
-
         const enemy = document.createElement("div");
-        enemy.setAttribute("life",3);
-        enemy.classList.add("enemy");
+
+        let numeroAleatorio = Math.floor(Math.random() * 20);
+        let velocity = 0;
+        let deathAnimation = "";
+
+        if(numeroAleatorio <10){
+            enemy.classList.add("enemy");
+            enemy.setAttribute("life",3);
+            velocity = 5;
+            deathAnimation = "bichoDeath"; 
+        }
+        else if(numeroAleatorio<17){
+            enemy.classList.add("fly")
+            enemy.setAttribute("life",1);
+            velocity = 7;
+            deathAnimation = "flyDeath"; 
+        }
+        else{
+            enemy.classList.add("tank")
+            enemy.setAttribute("life",6);
+            velocity = 2.5;
+            deathAnimation="tankDeath";
+        }
+
+        const lifebar = document.createElement("img");
+        lifebar.src = `img/life/lifebar${enemy.getAttribute("life")}.png`;
+        lifebar.classList.add("lifebar");
 
         enemyContainer.appendChild(lifebar);
         enemyContainer.appendChild(enemy);
@@ -86,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 game.removeChild(enemyContainer);
                 loseLife();
             } else {
-                enemyContainer.style.top = currentTop + 5 + "px";
+                enemyContainer.style.top = currentTop + velocity + "px";
             }
         }, 30);
 
@@ -124,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 enemy.style.animation = "none";
                 
                 // Añadir la animación de muerte
-                enemy.style.animation = "bichoDeath 1s steps(1) forwards";
+                enemy.style.animation = `${deathAnimation} 1s steps(1) forwards`;
                 combo+=2;
                 if(combo >= 10){
                     multiplicador+=1;
