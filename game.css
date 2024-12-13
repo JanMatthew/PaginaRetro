@@ -10,7 +10,7 @@ body {
     background-size: 80px;
     color: white;
     font-family: Arial, sans-serif;
-    cursor: url(img/aim.png) 16 16 , auto;
+    cursor: url(img/cursors/aim.png) 16 16 , auto;
 }
 
 /* Game Container */
@@ -85,7 +85,7 @@ body {
     height: 100px;
     background-size: cover;
     animation: bichoWalk 0.3s steps(1) infinite;
-    cursor: url(img/shoot.png) 16 16, auto;
+    cursor: url(img/cursors/shoot.png) 16 16, auto;
 }
 @keyframes bichoWalk {
     0%, 33% {
@@ -125,7 +125,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     animation: flyFly 0.3s steps(1) infinite alternate;
-    cursor: url(img/shoot.png) 16 16, auto;
+    cursor: url(img/cursors/shoot.png) 16 16, auto;
 }
 @keyframes flyFly {
     0%, 33% {
@@ -174,7 +174,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     animation: tankMove 0.3s steps(1) infinite alternate;
-    cursor: url(img/shoot.png) 16 16, auto;
+    cursor: url(img/cursors/shoot.png) 16 16, auto;
 }
 @keyframes tankMove {
     0%, 33% {

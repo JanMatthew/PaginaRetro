@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         lives = 3;
         livesImg.src = `img/life/lifebar${lives}.png`;
 
-        gameInterval = setInterval(spawnEnemy, 1500); // Spawn enemies every second
+        gameInterval = setInterval(spawnEnemy, 1000); // Spawn enemies every second
     }
 
     // Spawn enemies
