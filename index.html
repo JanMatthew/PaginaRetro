@@ -3,12 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Retro</title>
+    <title>Retro</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <a href="palizard.html">
-        <h1>Juego Retro</h1>
-    </a>
+    <audio id="background-audio" autoplay loop>
+        <source src="audio/Main Menu Theme - Starcraft.mp3" type="audio/mp3">
+        your browser does not support the audio element
+    </audio>
+    <div class="sidebar">
+        <div class="logo_container">
+            <img class="logo" src="img/Blizzard.webp">
+        </div>
+        <div class="mute-button-container">
+            <button id="mute-button" class="mute-button">
+                <img id="mute-icon" src="img/microOn.png" alt="Audio On">
+            </button>
+        </div>
+        <script>
+            const audio = document.getElementById('background-audio');
+            const muteButton = document.getElementById('mute-button');
+            const muteIcon = document.getElementById('mute-icon');
+        
+            muteButton.addEventListener('click', () => {
+                if (audio.muted) {
+                    audio.muted = false;
+                    muteIcon.src = 'img/microOn.png'; // Cambia a la imagen de audio encendido
+                    muteIcon.alt = 'Audio On';
+                } else {
+                    audio.muted = true;
+                    muteIcon.src = 'img/microOff.png'; // Cambia a la imagen de audio apagado
+                    muteIcon.alt = 'Audio Off';
+                }
+            });
+        </script>
+        <div class="buttons">
+            <ul>
+                <li> news
+                    <div class="flecha"></div>
+                </li>
+                <li>titles
+                    <div class="flecha"></div>
+                </li>
+                <li>Support
+                    <div class="flecha"></div>
+                </li>
+                <li>Library
+                    <div class="flecha"></div>
+                </li>
+                <li>Market
+                    <div class="flecha"></div>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <img class="marine" src="img/starcraft.webp">
+        </div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <img src="img/StarCraft.png" alt="Starcraft Logo">
+        </div>
+        <div class="content">
+            <div class="speech">
+                <blockquote>
+                    <p>“Let no human deny the perils of our time. While we struggle against one another...”</p>
+                    <p>“Korhal has chosen only its greatest rivals to receive this embassage...”</p>
+                    <p>“Despite subtly exerting their will over our fringe worlds...”</p>
+                </blockquote>
+                <p class="excerpt">- excerpts from a recent speech by Ambassador Mengsk of Korhal IV (cd: m P11 - P5)</p>
+            </div>
+            <div class="image-container">
+            </div>
+            <div class="description">
+                <p>Scattered and disunited, the many human worlds encompass a diverse range of cultures...</p>
+            </div>
+            <div class="vehicle-image">
+                
+            </div>
+            <div class="footer-text">
+                <p><strong>Starcraft</strong> is a real-time strategy game of interstellar combat...</p>
+            </div>
+            <div class="soldier">
+            </div>
+            <div class="system-requirements">
+                <p>
+                    <strong>IBM-PC</strong>
+                    <br>486/66 with 16 MB RAM
+                    <br>Windows 95
+                    <br>SVGA video card
+                    <br>Microsoft compatible mouse
+                    <br>Double-speed CD-ROM</p>
+            </div>
+            <a href="game.html" class="play-now">Play Now</a>
+        </div>
+        <div class="release-info">
+            <h2>Scheduled for release first quarter 1997 for both Windows 95 and the Macintosh</h2>
+        </div>
+        <div class="main-image">
+            <img src="img/starcraftGallery/starcraft1.webp" alt="Starcraft Screenshot">
+        </div>
+        <div>
+            <div class="image-gallery-title">
+                <h3>Image Gallery</h3>
+            </div>
+        </div>
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="img/starcraftGallery/starcraft2.avif" alt="Protoss Dragoons are spotted">
+                <p>Protoss Dragoons are spotted...</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img/starcraftGallery/starcraft3.jpg" alt="Terrans respond">
+                <p>...and the Terrans respond...</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img/starcraftGallery/starcraft4.jpg" alt="Goliaths unloaded">
+                <p>...by unloading Goliaths.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img/starcraftGallery/starcraft5.jpg" alt="Terran transports">
+                <p>Terran transports are loading...</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img/starcraftGallery/starcraft6.webp" alt="Protoss carriers">
+                <p>...when Protoss carriers appear...</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img/starcraftGallery/starcraft7.webp" alt="Launch interceptors">
+                <p>...and launch Interceptors.</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
